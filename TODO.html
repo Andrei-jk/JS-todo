@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO list</title>
+    <link rel="stylesheet" href="/CSS/TODO.css" />
+  </head>
+  <body>
+    <!-- общий контейнер -->
+    <div class="todo" data-js-todo>
+      <!-- заголовок -->
+      <h1 class="todo__title">TO DO LIST</h1>
+      <!-- форма для ввода задания -->
+      <form class="todo__form" data-js-todo-new-task-form>
+        <!-- блок ввода -->
+        <div class="todo__field field">
+          <!-- лейбл для поля -->
+          <!-- в for укажем ID поля ввода (id="new__task") чтобы связать их -->
+          <label for="new__task" class="field__label">ENTER NEW TASK</label>
+          <!-- input для ввода задания -->
+          <input
+            type="text"
+            class="field__input"
+            id="new__task"
+            placeholder=" "
+            autocomplete="off"
+            data-js-todo-new-task-input
+          />
+          <!-- в placeholder=" " указываем только символ пробела -->
+        </div>
+        <!-- кнопка добавить -->
+        <button class="button" type="submit">Add</button>
+      </form>
+      <!-- форма для поиска -->
+      <form class="todo__form" data-js-todo-search-task-form>
+        <!-- блок ввода -->
+        <div class="todo__field field">
+          <!-- лейбл для поля -->
+          <!-- в for укажем ID поля ввода (id="search__task") чтобы связать их -->
+          <label for="search__task" class="field__label">SEARCH TASK</label>
+          <!-- input для поиска задания -->
+          <input
+            type="search"
+            class="field__input"
+            id="search__task"
+            placeholder=" "
+            autocomplete="off"
+            data-js-todo-search-task-input
+          />
+          <!-- в placeholder=" " указываем только символ пробела -->
+        </div>
+      </form>
+      <!-- блок количества заданий -->
+      <div class="todo__info">
+        <div class="todo__total-tasks">
+          Total tasks: <span data-js-todo-total-tasks>0</span>
+        </div>
+        <button
+          class="todo__delete-all-button"
+          type="button"
+          data-js-todo-delete-all-button
+        >
+          delete all tasks
+        </button>
+      </div>
+      <!-- список заданий -->
+      <ul class="todo__list" data-js-todo-list>
+        <li class="todo__item todo-elem" data-js-todo-item>
+          <!-- checkbox -->
+          <input
+            type="checkbox"
+            class="todo-elem__checkbox"
+            id="todo-1"
+            data-js-todo-checkbox
+          />
+          <!-- название таска -->
+          <label for="todo-1" class="todo-elem__label" data-js-todo-label
+            >TODO 1</label
+          >
+          <!-- кнопка удаления конкретного таска -->
+          <button
+            class="todo-elem__delete-button"
+            type="button"
+            aria-level="delete"
+            title="delete"
+            data-js-todo-delete-button
+          >
+            &times;
+          </button>
+        </li>
+        <li class="todo__item todo-elem" data-js-todo-item>
+          <!-- checkbox -->
+          <input
+            type="checkbox"
+            class="todo-elem__checkbox"
+            id="todo-1"
+            data-js-todo-checkbox
+          />
+          <!-- название таска -->
+          <label for="todo-1" class="todo-elem__label" data-js-todo-label
+            >TODO 1</label
+          >
+          <!-- кнопка удаления конкретного таска -->
+          <button
+            class="todo-elem__delete-button"
+            type="button"
+            aria-level="delete"
+            title="delete"
+            data-js-todo-delete-button
+          >
+            &times;
+          </button>
+        </li>
+      </ul>
+      <!-- добавим пустой div для вывода служебной информиции -->
+      <div class="todo__empty-message" data-js-todo-empty-message></div>
+    </div>
+    <script src="TODO.js"></script>
+  </body>
+</html>
