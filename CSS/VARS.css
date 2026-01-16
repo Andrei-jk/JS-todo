@@ -1,0 +1,15 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-task: #2813e4;
+  --color-check-box: #92bfd1;
+  --color-button-add: #f51010;
+  --color-field-enter: #f5e610;
+  --color-placeholder: #ee6e6e;
+  --color-completed: #ee6edd;
+  --color-border: var(var(--color-button-add));
+  --color-border-radius: 8px;
+  --color-shadow: 0 4px 4px -4px;
+  --input-heigt: 40px;
+  -transition-duration:.2s;
+}
